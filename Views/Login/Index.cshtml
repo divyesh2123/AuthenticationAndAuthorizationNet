@@ -1,0 +1,26 @@
+﻿@model  AuthenticationAndAuthorization.Models.UserRegistrationViewModal
+@{
+    ViewBag.Title = "Index";
+}
+
+
+@using (Html.BeginForm("Index", "Login", FormMethod.Post))
+{
+
+    @Html.LabelFor(y => y.Name)
+    @Html.TextBoxFor(y => y.Name)
+
+    @Html.LabelFor(y => y.EmailID)
+    @Html.TextBoxFor(y => y.EmailID)
+
+
+    @Html.LabelFor(y => y.Password)
+    @Html.TextBoxFor(y => y.Password)
+
+
+    @Html.LabelFor(y => y.RoleId);
+    @Html.DropDownListFor(y => y.RoleId, Model.RoleData)
+
+    <input type="submit" value="Save" />
+
+}

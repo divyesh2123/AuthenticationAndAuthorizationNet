@@ -1,0 +1,17 @@
+﻿@model AuthenticationAndAuthorization.Models.LoginViewModal
+@{
+    ViewBag.Title = "Login";
+}
+
+@using (Html.BeginForm("Login", "Login",FormMethod.Post))
+{
+
+    @Html.LabelFor(y => y.Email)
+    @Html.TextBoxFor(y => y.Email)
+
+    @Html.LabelFor(y => y.Password)
+    @Html.TextBoxFor(y => y.Password)
+
+    <input type="submit" value="Save" />
+}
+
